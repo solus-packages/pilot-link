@@ -1,0 +1,51 @@
+<PISI>
+    <Source>
+        <Name>pilot-link</Name>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin@solus-project.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <License>LGPL-2.0</License>
+        <Summary xml:lang="en">pilot-link for Palm/PalmOS devices.</Summary>
+        <Description xml:lang="en">pilot-link is a suite of tools used to connect your Palm or PalmOS® compatible handheld with Unix, Linux, and any other POSIX-compatible machine. pilot-link works with all PalmOS® handhelds, including those made by Handspring, Sony, and Palm, as well as others.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>pilot-link-devel</Name>
+        <Summary xml:lang="en">Development files for pilot-link</Summary>
+        <Description xml:lang="en">pilot-link is a suite of tools used to connect your Palm or PalmOS® compatible handheld with Unix, Linux, and any other POSIX-compatible machine. pilot-link works with all PalmOS® handhelds, including those made by Handspring, Sony, and Palm, as well as others.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="current">pilot-link</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>pilot-link</Name>
+        <Summary xml:lang="en">pilot-link for Palm/PalmOS devices.</Summary>
+        <Description xml:lang="en">pilot-link is a suite of tools used to connect your Palm or PalmOS® compatible handheld with Unix, Linux, and any other POSIX-compatible machine. pilot-link works with all PalmOS® handhelds, including those made by Handspring, Sony, and Palm, as well as others.
+</Description>
+        <PartOf>desktop</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/share/pilot-link</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-11-11</Date>
+            <Version>0.12.5</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin@solus-project.com</Email>
+        </Update>
+    </History>
+</PISI>
