@@ -1,2 +1,4 @@
 libbluetooth.so.3
 libc.so.6
+libpopt.so.0
+libreadline.so.6

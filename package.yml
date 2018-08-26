@@ -1,20 +1,23 @@
 name       : pilot-link
 version    : 0.12.5
-release    : 1
+release    : 2
 source     :
-    - http://downloads.pilot-link.org/pilot-link-0.12.5.tar.bz2 : d3f99ec04016b38995fb370265200254710318105c792c017d3aaccfb97a84b2
+    - https://fossies.org/linux/misc/old/pilot-link-0.12.5.tar.bz2 : 0e3e0ea4649c7c3441b8be738d5e68332a5e414df622e013daba8e29d78bde56
 license    :
     - GPL-2.0
     - LGPL-2.0
 summary    : pilot-link for Palm/PalmOS devices.
 description: |
     pilot-link is a suite of tools used to connect your Palm or PalmOS® compatible handheld with Unix, Linux, and any other POSIX-compatible machine. pilot-link works with all PalmOS® handhelds, including those made by Handspring, Sony, and Palm, as well as others.
+component  : desktop
 builddeps  :
     - pkgconfig(bluez)
-    - pkgconfig(libpng)
+    - libpng12
     - pkgconfig(libusb-1.0)
+    - pkgconfig(popt)
 setup      : |
     %configure --enable-libusb \
+               --enable-conduits \
                --with-libiconv \
                --with-libpng \
                --disable-static
@@ -22,5 +25,3 @@ build      : |
     %make
 install    : |
     %make_install
-    # Remove random empty dir
-    rm -r %installroot%/usr/bin
